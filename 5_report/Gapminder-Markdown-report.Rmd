@@ -1,0 +1,28 @@
+---
+title: "Gapminder"
+author: "Dean Stewart"
+date: "08/03/2021"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+#tinytex::install_tinytex()
+library(tidyverse)
+library(gapminder)
+```
+
+## Introduction
+
+In this document, we will be exploring the Gapminder dataset.
+
+## Observations of Gapminder
+
+### Countries with life expectancy greater than 80
+
+```{r life over 80, echo=TRUE}
+gapminder2 <- gapminder %>% filter(lifeExp > 80)
+gapminder2
+```
+
+These are the countries with life expectancy *over* **80**!
